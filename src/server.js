@@ -17,4 +17,4 @@ app.get('/', (req, res) => {
     res.redirect(307, '/vizitka')
 })
 
-app.listen(3000, () => console.log('Listening on localhost:3000'))
+app.listen(5000, () => console.log('Listening on localhost:5000'))

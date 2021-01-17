@@ -55,6 +55,7 @@ module.exports = {
           patterns: [
             { from: path.resolve(SRC_DIR, 'routes'), to: path.resolve(DEST_DIR, 'routes'), noErrorOnMissing: true},
             { from: path.resolve(SRC_DIR, 'views'), to: path.resolve(DEST_DIR, 'views'), noErrorOnMissing: true},
+            { from: path.resolve(SRC_DIR, 'assets'), to: path.resolve(DEST_DIR, 'assets'), noErrorOnMissing: true},
           ],
         }),
         new CssMinimizerPlugin(),

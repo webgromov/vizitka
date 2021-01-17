@@ -1,52 +1,57 @@
 
 <%- include('partials/header.html') %>
 
-<main class="vizitka__wrapper">
+<div class="vizitka__wrapper">
     <div class="vizitka__ad">
-        <p class="vizitka__ad__link">Хочу такую визитку</p>
-        <div class="vizitka__ad__explain">
-            <p>Напиши мне в <a href="https://wa.me/79531042200">WhatsApp</a> и получишь в подарок при сотрудничестве</p>  
+        <a href="#" id="adButton" class="vizitka__ad__link">Хочу такую визитку</a>
+        <div id="adArea" class="vizitka__ad__explain">
+            <p>Напиши мне в <a href="https://wa.me/79531042200">WhatsApp</a> и получишь <br> в подарок при сотрудничестве</p>  
         </div>
     </div>
-    <div class="vizitka__background">
-        <div class="vizitka__card">
-            <div class="vizitka__avatar"><img src="/assets/img/avatar.jpg" alt=""></div>
+    <img src="/assets/img/env.jpg" alt="" class="vizitka__background">
+    <div class="vizitka__card">
+        <div class="vizitka__avatar_wrapper">
+            <img class="vizitka__avatar" src="/assets/img/avatar.jpg" alt="Avatar">
+        </div>
+        <main class="vizitka__content">
             <h1 class="vizitka__name">Александр Громов</h1>
             <p class="vizitka__description">Разработчик сайтов/веб-приложений/сервисов.
-                Интернет-маркетолог</p>
-            <ul class="information">
-                <li><img src="/assets/img/icons/location.svg" alt=""> <p>Москва, Санкт-Петербург, Краснодар</p></li>
+                Интернет-маркетолог.</p>
+            <ul class="vizitka__info">
+                <li class="vizitka__info__item">
+                    <img class="vizitka__info__icon" src="/assets/img/icons/location.svg" alt="Location: ">
+                    <p class="vizitka__info__text">Москва, Санкт-Петербург, Краснодар.</p>
+                </li>
             </ul>
 
             <ul class="vizitka__links">
                 <li>
                     <a class="vizitka__link" style="background: linear-gradient(180deg, #426AE0 41.67%, #0085FF 100%)" href="https://vk.com/webgromov" target="_blank">
-                        <img class="vizitka__link" src="/assets/img/icons/vk.svg" alt="VK">
-                        <h2>Вконтакте</h2>
+                        <img class="vizitka__link__icon" src="/assets/img/icons/vk.svg" alt="VK">
+                        <h2 class="vizitka__link__title">Вконтакте</h2>
                     </a>
                 </li>
                 <li>
-                    <a class="vizitka__link" style="background: linear-gradient(180deg, #426AE0 41.67%, #0085FF 100%)" href="https://wa.me/79531042200" target="_blank">
-                        <img class="vizitka__link" src="/assets/img/icons/whatsapp.svg" alt="VK">
-                        <h2>WhatsApp</h2>
+                    <a class="vizitka__link" style="background: linear-gradient(180deg, #3CCE59 41.67%, #0CFF3C 100%);" href="https://wa.me/79531042200" target="_blank">
+                        <img class="vizitka__link__icon" src="/assets/img/icons/whatsapp.svg" alt="WhatsApp">
+                        <h2 class="vizitka__link__title">WhatsApp</h2>
                     </a>
                 </li>
                 <li>
                     <a class="vizitka__link" style="background: linear-gradient(180deg, #DB00A9 0%, #F5012D 63.54%, #FFC600 100%);" href="https://instagram.com/webgromov" target="_blank">
-                        <img class="vizitka__link" src="/assets/img/icons/insta.svg" alt="VK">
-                        <h2>Instagram</h2>
+                        <img class="vizitka__link__icon" src="/assets/img/icons/instagram.svg" alt="Instagram">
+                        <h2 class="vizitka__link__title">Instagram</h2>
                     </a>
                 </li>
             </ul>
+        </main>
 
-            <div class="vizitka__link_bottom">
-                <a class="vizitka__link" style="background: linear-gradient(180deg, #DB00A9 0%, #F5012D 63.54%, #FFC600 100%);" href="https://instagram.com/webgromov" target="_blank">
-                    <img class="vizitka__link" src="/assets/img/icons/insta.svg" alt="VK">
-                    <h2>Instagram</h2>
-                </a>
-            </div>
+        <div class="vizitka__link_bottom">
+            <a class="vizitka__link rounded blink" style="background: linear-gradient(270deg, #3CCE59 41.67%, #0CFF3C 100%);" href="tel:79531042200">
+                <img class="vizitka__link__icon" src="/assets/img/icons/phone.svg" alt="PhoneCall">
+            </a>
         </div>
     </div>
-</main>
+</div>
 
 <%- include('partials/footer.html') %>

@@ -1,0 +1,12 @@
+@keyframes linkBlink {
+    from {
+        box-shadow: 0 0 0 $phone-color;
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba($phone-color, .5);
+
+    }
+    to {
+        box-shadow: 0 0 30px 10px rgba($phone-color, 0);
+    }
+}

@@ -1,7 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import 'parts/variables';
+@import 'parts/mixins';
+@import 'parts/animations';
+@import 'parts/common';
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
+    height: 100vh;
 }
+.vizitka {
+    &__wrapper {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        width: 600px;
+        height: 700px;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+        position: relative;
+        @include uiShadow;
+    }
+    &__background {
+        width: 100%;
+        height: 400px;
+    }
+    &__card, &__ad {
+        position: relative;
+        z-index: 1;
+    }
+    &__background {
+        max-height: $background-height;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__ad {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        &__link {
+            color: #fff;
+            margin: 5px 5px 0;
+            padding-bottom: 3px;
+            width: auto;
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 300;
+            border-bottom: 1px solid #fff;
+        }
+        &__explain {
+            // display: none;
+            margin-top: 15px;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 15px;
+            min-width: 300px;
+            position: relative;
+            display: none;
+            p {
+                margin: 0;
+            }
+            a {
+                display: inline;
+                color: #18F243;
+                text-decoration: underline;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 0;
+                height: 0; 
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #fff;
+                transform: translate(-50%, -100%);
+            }
+        }
+    }
+    &__card {
+        margin-top: $background-height;
+        background-color: #fff;
+        padding: 0 15px;
+    }
+    &__avatar {
+        border: 5px solid #fff;
+        &_wrapper {
+            margin-bottom: 5px;
+            position: relative;
+            top: - $avatar-size / 2;
+        }
+        margin: 0 auto;
+        display: block;
+        border-radius: 50%;
+        width: $avatar-size;
+        height: $avatar-size;
+    }
+    &__content {
+        margin-top: - $avatar-size / 2;
+    }
+    &__name {
+        margin: 0;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+    &__description {
+        font-weight: 300;
+        margin: 12px 0;
+        line-height: 20px;
+    }
+    &__info {
+        margin: 0 0 50px;
+        font-weight: 300;
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+        &__icon {
+            width: 15px;
+            height: 15px;
+        }
+        &__text {
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+    &__links {
+        margin: 0;
+    }
+    &__link {
+        @include uiShadow;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        padding: 15px 20px;
+        display: flex;
+        width: 100%;
+        &.rounded {
+            border-radius: 50%;
+            padding: 15px;
+            overflow: hidden;
+        }
+        &.blink {
+            animation: linkBlink 1.5s ease-in infinite;
+        }
+        &__title {
+            margin: 0;
+            color: #fff;
+            margin-left: 20px;
+        }
+        &_bottom {
+            position: fixed;
+            padding: 0 15px;
+            right: 0;
+            bottom: 10px;
+            .vizitka__link {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@import 'parts/pc-width';

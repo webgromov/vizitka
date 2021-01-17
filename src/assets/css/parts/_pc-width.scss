@@ -1,0 +1,13 @@
+@media(min-width: 550px) {
+    body {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .vizitka {
+        &__wrapper {
+            border-radius: 30px;
+        }
+    }
+}
