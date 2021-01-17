@@ -8,6 +8,12 @@
     .vizitka {
         &__wrapper {
             border-radius: 30px;
+	    @include uiShadow;
         }
+	&__ad {
+	    &__link {
+	    	margin-top: 5px;
+	    }
+	}
     }
 }
